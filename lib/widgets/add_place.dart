@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:favorite_places/widgets/image_input.dart';
 import 'package:favorite_places/providers/add_place_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -41,6 +42,8 @@ class _AddPlaceState extends ConsumerState<AddPlace> {
             controller: _titleController,
             style: TextStyle(color: style.colorScheme.onBackground),
           ),
+          const SizedBox(height: 10),
+          const ImageInput(),
           const SizedBox(height: 16),
           ElevatedButton.icon(
             onPressed: _savePlace,

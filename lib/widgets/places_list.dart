@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:favorite_places/screens/place_detail_screen.dart';
 import 'package:favorite_places/models/places_structure.dart';
 
 class PlacesList extends StatelessWidget {
   const PlacesList({super.key, required this.placesList});
 
   final List<PlacesStructure> placesList;
+
+  // Method to open place detail
+  void _openPlaceDetail(BuildContext context, PlacesStructure place) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) {
+          return PlaceDetailScreen(place: place);
+        },
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +38,9 @@ class PlacesList extends StatelessWidget {
                 color: style.colorScheme.onBackground,
               ),
             ),
+            onTap: () {
+              _openPlaceDetail(context, placesList[index]);
+            },
           );
         },
       );
