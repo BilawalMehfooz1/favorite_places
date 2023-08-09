@@ -1,9 +1,14 @@
+import 'dart:io';
 import 'package:uuid/uuid.dart';
 
 const uuid = Uuid();
 
 class PlacesStructure {
-  PlacesStructure({required this.title}) : id = uuid.v4();
+  PlacesStructure({
+    required this.title,
+    required this.image,
+  }) : id = uuid.v4();
   final String id;
   final String title;
+  final File image;
 }
