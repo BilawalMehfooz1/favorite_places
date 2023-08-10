@@ -1,4 +1,3 @@
-import 'package:favorite_places/widgets/places_list.dart';
 import 'package:flutter/material.dart';
 import 'package:favorite_places/models/places_structure.dart';
 
