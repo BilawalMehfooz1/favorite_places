@@ -42,6 +42,12 @@ class PlacesList extends StatelessWidget {
                 color: style.colorScheme.onBackground,
               ),
             ),
+            subtitle: Text(
+              placesList[index].location.address,
+              style: TextStyle(
+                color: style.colorScheme.onBackground,
+              ),
+            ),
             onTap: () {
               _openPlaceDetail(context, placesList[index]);
             },
