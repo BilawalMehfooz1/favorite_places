@@ -7,6 +7,7 @@ class PlacesList extends StatelessWidget {
 
   final List<PlacesStructure> placesList;
 
+
   // Method to open place detail
   void _openPlaceDetail(BuildContext context, PlacesStructure place) {
     Navigator.of(context).push(
@@ -44,7 +45,7 @@ class PlacesList extends StatelessWidget {
             ),
             subtitle: Text(
               placesList[index].location.address,
-              style: TextStyle(
+              style: style.textTheme.bodySmall!.copyWith(
                 color: style.colorScheme.onBackground,
               ),
             ),
