@@ -61,12 +61,13 @@ class PlaceDetailScreen extends StatelessWidget {
                     vertical: 16,
                   ),
                   decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                    colors: [
-                      Colors.transparent,
-                      Colors.black54,
-                    ],
-                  )),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.transparent,
+                        Colors.black54,
+                      ],
+                    ),
+                  ),
                   child: Text(
                     place.location.address,
                     textAlign: TextAlign.center,

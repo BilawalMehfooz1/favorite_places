@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:favorite_places/screens/map_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:http/http.dart' as http;
@@ -80,6 +81,14 @@ class _LocationInputState extends State<LocationInput> {
     widget.onSelectLocation(_pickedLocation!);
   }
 
+  void _selectOnMap() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => const MapScreen(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final style = Theme.of(context);
@@ -129,7 +138,7 @@ class _LocationInputState extends State<LocationInput> {
             TextButton.icon(
               icon: const Icon(Icons.map),
               label: const Text('Select on Map'),
-              onPressed: () {},
+              onPressed: _selectOnMap,
             ),
           ],
         )
